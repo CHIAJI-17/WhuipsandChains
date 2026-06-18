@@ -1,0 +1,112 @@
+:root {
+    --primary-dark: #0a0a0a;
+    --secondary-dark: #1a1a1a;
+    --accent-gold: #c9a84c;
+    --accent-burgundy: #8b1a1a;
+    --text-light: #f5f0e8;
+    --text-muted: #9a8e7f;
+    --border-dark: #2a2a2a;
+    --card-bg: #141414;
+    --shadow-dark: rgba(0, 0, 0, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+}
+
+.gold-text {
+    color: var(--accent-gold);
+}
+
+a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #dbb95c;
+}
+
+.btn-gold {
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+    border: none;
+    padding: 0.6rem 2rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+.btn-gold:hover {
+    background-color: #dbb95c;
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.navbar-custom {
+    background-color: var(--primary-dark);
+    border-bottom: 2px solid var(--accent-gold);
+    padding: 1rem 0;
+}
+.navbar-custom .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: 2px;
+}
+.navbar-custom .navbar-brand span {
+    color: var(--accent-gold);
+}
+.navbar-custom .nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: var(--accent-gold);
+}
+
+.footer-custom {
+    background-color: var(--primary-dark);
+    border-top: 2px solid var(--accent-gold);
+    padding: 3rem 0 1.5rem;
+    margin-top: 3rem;
+}
+.footer-custom h5 {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+}
+.footer-custom a {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+.footer-custom a:hover {
+    color: var(--accent-gold);
+}
+.footer-custom .social-links a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+.footer-custom .divider {
+    border-color: var(--border-dark);
+}
