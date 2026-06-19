@@ -62,8 +62,25 @@
         letter-spacing: 2px;
         border-radius: 20px;
     }
+    .stats-section {
+    background-color: var(--secondary-dark);
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-dark);
+    }
+    .stats-section .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--accent-gold);
+    }
+    .stats-section .stat-label {
+        color: var(--text-muted);
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
 </style>
 </head>
+
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-custom">
@@ -117,6 +134,28 @@
                     <i class="bi bi-car-front"></i>
                     <span>Luxury Collection</span>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="stats-section">
+    <div class="container">
+        <div class="row text-center g-4">
+            <div class="col-md-3">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Vehicles Available</div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Customer Satisfaction</div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Concierge Support</div>
             </div>
         </div>
     </div>
