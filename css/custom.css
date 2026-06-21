@@ -16,6 +16,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--primary-dark);
     color: var(--text-light);
@@ -80,10 +84,22 @@ a:hover {
     letter-spacing: 1px;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
+    position: relative;
 }
-.navbar-custom .nav-link:hover,
-.navbar-custom .nav-link.active {
-    color: var(--accent-gold);
+.navbar-custom .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent-gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+    width: 80%;
 }
 
 .footer-custom {
