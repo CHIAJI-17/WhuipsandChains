@@ -146,3 +146,196 @@ const vehicles = [{
 }];
 
 console.log('Vehicles loaded:', vehicles.length);
+
+// ============================================
+// RENDER INVENTORY
+// ============================================
+const grid = document.getElementById('vehicleGrid');
+const resultCount = document.getElementById('resultCount');
+
+function renderInventory(list) {
+    if (!grid) return;
+    if (list.length === 0) {
+        grid.innerHTML = `
+            <div class="col-12 text-center py-5">
+                <i class="bi bi-search display-4 text-muted"></i>
+                <p class="text-muted mt-3">No vehicles match your criteria.</p>
+            </div>
+        `;
+        resultCount.textContent = '0 vehicles found';
+        return;
+    }
+
+    let html = '';
+    list.forEach(v => {
+        const vinShort = v.vin ? v.vin.slice(-6) : 'N/A';
+        html += `
+            <div class="col-md-6 col-lg-4">
+                <div class="vehicle-card">
+                    <img src="${v.image}" class="card-img-top" alt="${v.brand} ${v.model}" />
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">${v.brand} ${v.model}</h5>
+                            <span class="badge-status badge-in-stock">${v.status}</span>
+                        </div>
+                        <div class="vehicle-meta">
+                            <p class="mb-1"><i class="bi bi-calendar3"></i> ${v.year} · <i class="bi bi-speedometer2"></i> ${v.mileageDisplay}</p>
+                            <p class="mb-1"><i class="bi bi-gear"></i> ${v.transmission}</p>
+                            <p class="mb-1"><i class="bi bi-fuel-pump"></i> ${v.engine}</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt"></i> ${v.location} · <i class="bi bi-upc-scan"></i> VIN: …${vinShort}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">${v.priceDisplay}</span>
+                                <button class="btn-report" data-id="${v.id}">
+                                    <i class="bi bi-file-text"></i> Report
+                                </button>
+                            </div>
+                        </div>
+                        <div id="report-${v.id}" class="report-panel">
+                            <p><strong>Full VIN:</strong> ${v.vin}</p>
+                            <p><strong>Crash History:</strong> ${v.crashHistory}</p>
+                            <p><strong>Maintenance Estimate:</strong> ${v.maintenanceCost}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    grid.innerHTML = html;
+    resultCount.textContent = `${list.length} vehicle${list.length > 1 ? 's' : ''} found`;
+
+    document.querySelectorAll('.btn-report').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const id = this.dataset.id;
+            const panel = document.getElementById(`report-${id}`);
+            if (panel) panel.classList.toggle('show');
+        });
+    });
+}
+// RENDER INVENTORY
+const grid = document.getElementById('vehicleGrid');
+const resultCount = document.getElementById('resultCount');
+
+function renderInventory(list) {
+    if (!grid) return;
+    if (list.length === 0) {
+        grid.innerHTML = `
+            <div class="col-12 text-center py-5">
+                <i class="bi bi-search display-4 text-muted"></i>
+                <p class="text-muted mt-3">No vehicles match your criteria.</p>
+            </div>
+        `;
+        resultCount.textContent = '0 vehicles found';
+        return;
+    }
+
+    let html = '';
+    list.forEach(v => {
+        const vinShort = v.vin ? v.vin.slice(-6) : 'N/A';
+        html += `
+            <div class="col-md-6 col-lg-4">
+                <div class="vehicle-card">
+                    <img src="${v.image}" class="card-img-top" alt="${v.brand} ${v.model}" />
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <h5 class="card-title">${v.brand} ${v.model}</h5>
+                            <span class="badge-status badge-in-stock">${v.status}</span>
+                        </div>
+                        <div class="vehicle-meta">
+                            <p class="mb-1"><i class="bi bi-calendar3"></i> ${v.year} · <i class="bi bi-speedometer2"></i> ${v.mileageDisplay}</p>
+                            <p class="mb-1"><i class="bi bi-gear"></i> ${v.transmission}</p>
+                            <p class="mb-1"><i class="bi bi-fuel-pump"></i> ${v.engine}</p>
+                            <p class="mb-2"><i class="bi bi-geo-alt"></i> ${v.location} · <i class="bi bi-upc-scan"></i> VIN: …${vinShort}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">${v.priceDisplay}</span>
+                                <button class="btn-report" data-id="${v.id}">
+                                    <i class="bi bi-file-text"></i> Report
+                                </button>
+                            </div>
+                        </div>
+                        <div id="report-${v.id}" class="report-panel">
+                            <p><strong>Full VIN:</strong> ${v.vin}</p>
+                            <p><strong>Crash History:</strong> ${v.crashHistory}</p>
+                            <p><strong>Maintenance Estimate:</strong> ${v.maintenanceCost}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    grid.innerHTML = html;
+    resultCount.textContent = `${list.length} vehicle${list.length > 1 ? 's' : ''} found`;
+
+    document.querySelectorAll('.btn-report').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const id = this.dataset.id;
+            const panel = document.getElementById(`report-${id}`);
+            if (panel) panel.classList.toggle('show');
+        });
+    });
+}
+// FILTER AND SORT
+function getFilteredAndSorted() {
+    const search = document.getElementById('searchInput').value.toLowerCase().trim();
+    const type = document.getElementById('typeFilter').value;
+    const sort = document.getElementById('sortSelect').value;
+
+    let result = [...vehicles];
+
+    if (search) {
+        result = result.filter(v =>
+            v.brand.toLowerCase().includes(search) ||
+            v.model.toLowerCase().includes(search)
+        );
+    }
+
+    if (type !== 'all') {
+        result = result.filter(v => v.type === type);
+    }
+
+    switch (sort) {
+        case 'price-low':
+            result.sort((a, b) => a.price - b.price);
+            break;
+        case 'price-high':
+            result.sort((a, b) => b.price - a.price);
+            break;
+        case 'year-new':
+            result.sort((a, b) => b.year - a.year);
+            break;
+        default:
+            break;
+    }
+
+    return result;
+}
+
+function applyFilters() {
+    const filtered = getFilteredAndSorted();
+    renderInventory(filtered);
+}
+
+function resetFilters() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('typeFilter').value = 'all';
+    document.getElementById('sortSelect').value = 'default';
+    applyFilters();
+}
+// 
+// INITIALIZATION
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const typeFilter = document.getElementById('typeFilter');
+    const sortSelect = document.getElementById('sortSelect');
+    const resetBtn = document.getElementById('resetFiltersBtn');
+
+    if (searchInput) searchInput.addEventListener('input', applyFilters);
+    if (typeFilter) typeFilter.addEventListener('change', applyFilters);
+    if (sortSelect) sortSelect.addEventListener('change', applyFilters);
+    if (resetBtn) resetBtn.addEventListener('click', resetFilters);
+
+    applyFilters();
+});
