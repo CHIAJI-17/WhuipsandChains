@@ -339,3 +339,63 @@ document.addEventListener('DOMContentLoaded', function() {
 
     applyFilters();
 });
+// CONTACT FORM VALIDATION
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+        let isValid = true;
+
+        document.querySelectorAll('.error-message').forEach(el => el.remove());
+
+        if (name.value.trim().length < 2) {
+            showError(name, 'Please enter your full name.');
+            isValid = false;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email.value.trim())) {
+            showError(email, 'Please enter a valid email address.');
+            isValid = false;
+        }
+
+        if (message.value.trim().length < 10) {
+            showError(message, 'Please enter a message (at least 10 characters).');
+            isValid = false;
+        }
+
+        if (isValid) {
+            const successDiv = document.createElement('div');
+            successDiv.className = 'alert alert-success mt-3';
+            successDiv.style.backgroundColor = '#1a3a2a';
+            successDiv.style.color = '#6bcb9a';
+            successDiv.style.border = '1px solid #2a4a3a';
+            successDiv.innerHTML = 'Your message has been sent. We will be in touch shortly.';
+            form.appendChild(successDiv);
+            form.reset();
+            setTimeout(() => successDiv.remove(), 5000);
+        }
+    });
+
+    function showError(input, message) {
+        const error = document.createElement('div');
+        error.className = 'error-message';
+        error.style.color = '#cb6b6b';
+        error.style.fontSize = '0.85rem';
+        error.style.marginTop = '0.25rem';
+        error.textContent = message;
+        input.parentNode.appendChild(error);
+        input.style.borderColor = '#cb6b6b';
+        input.addEventListener('input', function() {
+            this.style.borderColor = '';
+            const err = this.parentNode.querySelector('.error-message');
+            if (err) err.remove();
+        });
+    }
+});
