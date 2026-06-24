@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhuipsandChains – Service</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <style>
+        .service-hero {
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border-dark);
+        }
+        .service-hero h1 {
+            font-size: 2.5rem;
+        }
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dark);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+        .service-card h5 {
+            color: var(--accent-gold);
+        }
+        .service-card .price {
+            color: var(--text-light);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .service-card .price small {
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 0.85rem;
+        }
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .service-card ul li {
+            padding: 0.2rem 0;
+        }
+        .service-card ul li i {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="HomePage.html">
+                <i class="bi bi-speedometer2"></i> Whuips<span>and</span>Chains
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="HomePage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Inventory.html">Inventory</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Financing.html">Financing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Service.html">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Warranty.html">Warranty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Trade-In.html">Trade-In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Staff.html">Staff</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-hero">
+        <div class="container">
+            <h1>Premium <span class="gold-text">Service</span></h1>
+            <p class="text-muted">Expert maintenance and care for your luxury vehicle or motorcycle.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="bi bi-droplet"></i>
+                        <h5>Basic Service</h5>
+                        <div class="price">KES 15,000 <small>+ parts</small></div>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> Oil and Filter Change</li>
+                            <li><i class="bi bi-check-circle"></i> Fluid Top-Up</li>
+                            <li><i class="bi bi-check-circle"></i> Tire Pressure Check</li>
+                            <li><i class="bi bi-check-circle"></i> Basic Inspection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="bi bi-gear"></i>
+                        <h5>Full Service</h5>
+                        <div class="price">KES 45,000 <small>+ parts</small></div>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> Everything in Basic</li>
+                            <li><i class="bi bi-check-circle"></i> Brake Inspection</li>
+                            <li><i class="bi bi-check-circle"></i> Suspension Check</li>
+                            <li><i class="bi bi-check-circle"></i> Diagnostic Scan</li>
+                            <li><i class="bi bi-check-circle"></i> Battery Test</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="bi bi-star"></i>
+                        <h5>Premium Service</h5>
+                        <div class="price">KES 85,000 <small>+ parts</small></div>
+                        <ul>
+                            <li><i class="bi bi-check-circle"></i> Everything in Full</li>
+                            <li><i class="bi bi-check-circle"></i> Engine Tune-Up</li>
+                            <li><i class="bi bi-check-circle"></i> Transmission Service</li>
+                            <li><i class="bi bi-check-circle"></i> AC Service</li>
+                            <li><i class="bi bi-check-circle"></i> Detail and Polish</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="Contact.html" class="btn btn-gold">Book a Service</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Whuips<span class="gold-text">and</span>Chains</h5>
+                    <p class="text-muted small">Premium luxury vehicles and motorcycles. Where elegance meets performance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="Inventory.html">Inventory</a></li>
+                        <li><a href="Financing.html">Financing</a></li>
+                        <li><a href="Trade-In.html">Trade-In</a></li>
+                        <li><a href="Service.html">Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled small">
+                        <li><i class="bi bi-geo-alt gold-text"></i> Nairobi, Kenya</li>
+                        <li><i class="bi bi-telephone gold-text"></i> +254 700 123 456</li>
+                        <li><i class="bi bi-envelope gold-text"></i> info@whuipsandchains.co.ke</li>
+                        <li><i class="bi bi-clock gold-text"></i> Mon–Sat: 8:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <p class="small text-muted">Subscribe for exclusive offers.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-dark" placeholder="Your email" />
+                            <button class="btn btn-gold" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="divider" />
+            <p class="text-center small text-muted mb-0">&copy; 2026 WhuipsandChains. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
