@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhuipsandChains – Trade-In</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <style>
+        .tradein-hero {
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--border-dark);
+        }
+        .tradein-hero h1 {
+            font-size: 2.5rem;
+        }
+        .tradein-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-dark);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+        .tradein-card label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .steps-card {
+            background: var(--secondary-dark);
+            border: 1px solid var(--border-dark);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        .steps-card .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-dark);
+        }
+        .steps-card .step:last-child {
+            border-bottom: none;
+        }
+        .steps-card .step-number {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .steps-card .step-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .steps-card .step-text strong {
+            color: var(--text-light);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="HomePage.html">
+                <i class="bi bi-speedometer2"></i> Whuips<span>and</span>Chains
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="HomePage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Inventory.html">Inventory</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Financing.html">Financing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Service.html">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Warranty.html">Warranty</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Trade-In.html">Trade-In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Staff.html">Staff</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="tradein-hero">
+        <div class="container">
+            <h1>Trade-In <span class="gold-text">Valuation</span></h1>
+            <p class="text-muted">Get an instant estimate for your vehicle. Trade up to luxury.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-7">
+                    <div class="tradein-card">
+                        <h5 class="gold-text mb-3">Get Your Quote</h5>
+                        <form id="tradeinForm">
+                            <div class="mb-3">
+                                <label for="vehicleMake" class="form-label">Make</label>
+                                <input type="text" id="vehicleMake" class="form-control form-control-dark" placeholder="e.g., Toyota, BMW, Ducati" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="vehicleModel" class="form-label">Model</label>
+                                <input type="text" id="vehicleModel" class="form-control form-control-dark" placeholder="e.g., Land Cruiser, Panigale" />
+                            </div>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="vehicleYear" class="form-label">Year</label>
+                                    <input type="number" id="vehicleYear" class="form-control form-control-dark" placeholder="2023" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="vehicleMileage" class="form-label">Mileage (km)</label>
+                                    <input type="number" id="vehicleMileage" class="form-control form-control-dark" placeholder="35000" />
+                                </div>
+                            </div>
+                            <div class="mb-3 mt-3">
+                                <label for="vehicleCondition" class="form-label">Condition</label>
+                                <select id="vehicleCondition" class="form-select form-select-dark">
+                                    <option value="excellent">Excellent</option>
+                                    <option value="good" selected>Good</option>
+                                    <option value="fair">Fair</option>
+                                    <option value="poor">Poor</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-gold">Get Valuation</button>
+                        </form>
+                        <div id="valuationResult"></div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="steps-card">
+                        <h5 class="gold-text mb-3">How It Works</h5>
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text"><strong>Tell us about your vehicle</strong><br />Enter the make, model, year, and mileage.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text"><strong>Get an instant estimate</strong><br />Our algorithm calculates market value.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text"><strong>Visit us for inspection</strong><br />We will verify the condition in person.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text"><strong>Trade up to luxury</strong><br />Apply the value toward your new vehicle.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Whuips<span class="gold-text">and</span>Chains</h5>
+                    <p class="text-muted small">Premium luxury vehicles and motorcycles. Where elegance meets performance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled small">
+                        <li><a href="Inventory.html">Inventory</a></li>
+                        <li><a href="Financing.html">Financing</a></li>
+                        <li><a href="Trade-In.html">Trade-In</a></li>
+                        <li><a href="Service.html">Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled small">
+                        <li><i class="bi bi-geo-alt gold-text"></i> Nairobi, Kenya</li>
+                        <li><i class="bi bi-telephone gold-text"></i> +254 700 123 456</li>
+                        <li><i class="bi bi-envelope gold-text"></i> info@whuipsandchains.co.ke</li>
+                        <li><i class="bi bi-clock gold-text"></i> Mon–Sat: 8:00 AM – 6:00 PM</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h5>Newsletter</h5>
+                    <p class="small text-muted">Subscribe for exclusive offers.</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control form-control-dark" placeholder="Your email" />
+                            <button class="btn btn-gold" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="divider" />
+            <p class="text-center small text-muted mb-0">&copy; 2026 WhuipsandChains. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
