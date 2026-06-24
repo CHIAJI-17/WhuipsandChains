@@ -452,3 +452,89 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     });
 });
+// TRADE-IN VALUATION CALCULATOR
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('tradeinForm');
+    const resultDiv = document.getElementById('valuationResult');
+
+    if (!form) return;
+
+    const vehicleValues = {
+        'toyota': { base: 1500000, depreciation: 0.08 },
+        'bmw': { base: 2500000, depreciation: 0.10 },
+        'mercedes': { base: 3000000, depreciation: 0.09 },
+        'bentley': { base: 20000000, depreciation: 0.05 },
+        'rolls-royce': { base: 30000000, depreciation: 0.04 },
+        'porsche': { base: 18000000, depreciation: 0.07 },
+        'range rover': { base: 12000000, depreciation: 0.08 },
+        'ducati': { base: 2500000, depreciation: 0.10 },
+        'harley-davidson': { base: 2800000, depreciation: 0.09 },
+        'harley': { base: 2800000, depreciation: 0.09 },
+        'yamaha': { base: 800000, depreciation: 0.12 },
+        'kawasaki': { base: 700000, depreciation: 0.12 },
+        'honda': { base: 900000, depreciation: 0.11 }
+    };
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const make = document.getElementById('vehicleMake').value.toLowerCase().trim();
+        const model = document.getElementById('vehicleModel').value.trim();
+        const year = parseInt(document.getElementById('vehicleYear').value);
+        const mileage = parseInt(document.getElementById('vehicleMileage').value);
+        const condition = document.getElementById('vehicleCondition').value;
+
+        if (!make || !model || !year || !mileage) {
+            resultDiv.innerHTML = `
+                <div style="background:#3a1a1a; color:#cb6b6b; border:1px solid #4a2a2a; padding:1rem; border-radius:4px; margin-top:1.5rem;">
+                    Please fill in all fields.
+                </div>
+            `;
+            return;
+        }
+
+        let baseValue = 1000000;
+        for (const [key, value] of Object.entries(vehicleValues)) {
+            if (make.includes(key)) {
+                baseValue = value.base;
+                break;
+            }
+        }
+
+        const currentYear = 2026;
+        const age = currentYear - year;
+        const depreciationRate = 0.10;
+        let value = baseValue * Math.pow(1 - depreciationRate, age);
+
+        const mileageDeduction = Math.floor(mileage / 10000) * 0.02;
+        value = value * (1 - Math.min(mileageDeduction, 0.30));
+
+        const conditionMultipliers = {
+            'excellent': 1.15,
+            'good': 1.0,
+            'fair': 0.80,
+            'poor': 0.55
+        };
+        value = value * (conditionMultipliers[condition] || 1.0);
+
+        value = Math.max(value, 50000);
+
+        resultDiv.innerHTML = `
+            <div style="background:var(--secondary-dark); border:1px solid var(--accent-gold); padding:1.5rem; border-radius:8px; margin-top:1.5rem;">
+                <h5 style="color:var(--accent-gold); margin-bottom:1rem;">Trade-In Valuation</h5>
+                <p style="color:var(--text-muted);">
+                    <strong style="color:var(--text-light);">${make.toUpperCase()} ${model}</strong> (${year}) · ${condition.charAt(0).toUpperCase() + condition.slice(1)} condition
+                </p>
+                <p style="font-size:2rem; font-weight:700; color:var(--text-light);">
+                    KES ${Math.round(value).toLocaleString()}
+                </p>
+                <p style="color:var(--text-muted); font-size:0.85rem;">
+                    <i class="bi bi-info-circle"></i> Based on current market conditions and vehicle data.
+                </p>
+                <button class="btn btn-gold mt-2" onclick="this.parentElement.parentElement.innerHTML=''">
+                    <i class="bi bi-arrow-repeat"></i> New Valuation
+                </button>
+            </div>
+        `;
+    });
+});
