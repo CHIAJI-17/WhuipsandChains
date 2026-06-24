@@ -399,3 +399,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// FINANCING PAYMENT CALCULATOR
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('financeForm');
+    const resultDiv = document.getElementById('paymentResult');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const amount = parseFloat(document.getElementById('loanAmount').value);
+        const rate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+        const term = parseInt(document.getElementById('loanTerm').value);
+
+        if (amount <= 0 || rate < 0 || term <= 0) {
+            resultDiv.innerHTML = `
+                <div class="alert" style="background:#3a1a1a; color:#cb6b6b; border:1px solid #4a2a2a; padding:1rem; border-radius:4px; margin-top:1.5rem;">
+                    Please enter valid values for all fields.
+                </div>
+            `;
+            return;
+        }
+
+        const monthlyPayment = amount * (rate * Math.pow(1 + rate, term)) / (Math.pow(1 + rate, term) - 1);
+        const totalPayment = monthlyPayment * term;
+        const totalInterest = totalPayment - amount;
+
+        resultDiv.innerHTML = `
+            <div style="background:var(--secondary-dark); border:1px solid var(--accent-gold); padding:1.5rem; border-radius:8px; margin-top:1.5rem;">
+                <h5 style="color:var(--accent-gold); margin-bottom:1rem;">Payment Summary</h5>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                    <div>
+                        <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:0.25rem;">Monthly Payment</p>
+                        <p style="font-size:1.5rem; font-weight:700; color:var(--text-light);">KES ${monthlyPayment.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0})}</p>
+                    </div>
+                    <div>
+                        <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:0.25rem;">Total Payment</p>
+                        <p style="font-size:1.5rem; font-weight:700; color:var(--text-light);">KES ${totalPayment.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0})}</p>
+                    </div>
+                    <div>
+                        <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:0.25rem;">Total Interest</p>
+                        <p style="font-size:1.3rem; font-weight:600; color:var(--accent-gold);">KES ${totalInterest.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0})}</p>
+                    </div>
+                    <div>
+                        <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:0.25rem;">Loan Term</p>
+                        <p style="font-size:1.3rem; font-weight:600; color:var(--text-light);">${term} months</p>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+});
