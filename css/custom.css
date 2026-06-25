@@ -135,3 +135,55 @@ a:hover {
     color: var(--accent-gold);
     font-weight: 600;
 }
+.showroom-wrapper {
+    border: 3px solid var(--accent-gold);
+    border-radius: 12px;
+    padding: 8px;
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    box-shadow: 
+        0 0 30px rgba(201, 168, 76, 0.15),
+        inset 0 0 30px rgba(201, 168, 76, 0.05);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.showroom-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, 
+        var(--accent-gold), 
+        transparent, 
+        var(--accent-gold), 
+        transparent
+    );
+    background-size: 300% 300%;
+    z-index: -1;
+    border-radius: 14px;
+    animation: shimmer 4s ease-in-out infinite;
+    opacity: 0.3;
+}
+
+.showroom-wrapper:hover {
+    transform: scale(1.01);
+    box-shadow: 
+        0 0 50px rgba(201, 168, 76, 0.25),
+        inset 0 0 30px rgba(201, 168, 76, 0.08);
+}
+
+.showroom-wrapper img {
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
