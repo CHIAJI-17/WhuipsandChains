@@ -131,3 +131,7 @@ a:hover {
 .footer-custom .divider {
     border-color: var(--border-dark);
 }
+.navbar-custom .nav-link.active {
+    color: var(--accent-gold);
+    font-weight: 600;
+}
