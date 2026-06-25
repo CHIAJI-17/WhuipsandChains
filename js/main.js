@@ -13,8 +13,8 @@ const vehicles = [{
     engine: "6.0L W12 Twin-Turbo",
     location: "Nairobi",
     status: "In Stock",
-    vin: "SCBDR3ZA7PC012345",
-    image: "https://placehold.co/600x400/1a1a1a/c9a84c?text=Bentley+Continental+GT",
+    vin: "SCBDR3ZA7PC012349",
+    image: "images/Bentley Continental GT Speed.jpeg",
     crashHistory: "Pristine condition. Single owner. Full Bentley service history. No accidents.",
     maintenanceCost: "KES 450,000/year: Factory servicing, premium parts, specialized technicians."
 }, {
@@ -31,8 +31,8 @@ const vehicles = [{
     engine: "6.75L V12",
     location: "Nairobi",
     status: "In Stock",
-    vin: "SCA664L57NUX12345",
-    image: "https://placehold.co/600x400/1a1a1a/c9a84c?text=Rolls-Royce+Ghost",
+    vin: "SCA664L57NUX12346",
+    image: "images/Rolls-Royce Ghost.jpeg",
     crashHistory: "Immaculate. Chauffeur-driven. Complete service records. No claims.",
     maintenanceCost: "KES 600,000/year: Bespoke servicing, factory-trained technicians."
 }, {
@@ -49,8 +49,8 @@ const vehicles = [{
     engine: "4.0L V8 Biturbo",
     location: "Mombasa",
     status: "In Stock",
-    vin: "WDX7J8KB6RP123456",
-    image: "https://placehold.co/600x400/1a1a1a/c9a84c?text=Maybach+S-Class",
+    vin: "WDX7J8KB6RP123457",
+    image: "images/Maybach S class.jpeg",
     crashHistory: "Showroom condition. Executive use. Full warranty remaining.",
     maintenanceCost: "KES 350,000/year: Premium servicing, genuine parts."
 }, {
@@ -67,8 +67,8 @@ const vehicles = [{
     engine: "3.8L Flat-6 Twin-Turbo",
     location: "Nairobi",
     status: "In Stock",
-    vin: "WP0AD2A90PSA12345",
-    image: "https://placehold.co/600x400/1a1a1a/c9a84c?text=Porsche+911+Turbo+S",
+    vin: "WP0AD2A90PSA12348",
+    image: "images/Porsche 911 turbo s.jpeg",
     crashHistory: "Track-ready. Garage kept. No accidents. Ceramic brakes.",
     maintenanceCost: "KES 400,000/year: Performance servicing, specialized parts."
 }, {
@@ -85,8 +85,8 @@ const vehicles = [{
     engine: "4.4L V8 Diesel",
     location: "Nairobi",
     status: "In Stock",
-    vin: "SALGL2SE3PA123456",
-    image: "https://placehold.co/600x400/1a1a1a/c9a84c?text=Range+Rover+Autobiography",
+    vin: "SALGL2SE3PA123459",
+    image: "images/Range Rover Autobiography LWB.jpeg",
     crashHistory: "Well-maintained. Full service history. No accidents.",
     maintenanceCost: "KES 280,000/year: Diesel servicing, specialized off-road checks."
 }, {
@@ -99,12 +99,12 @@ const vehicles = [{
     priceDisplay: "KES 3,200,000",
     mileage: 2800,
     mileageDisplay: "2,800 km",
-    transmission: "6-Speed Manual",
+    transmission: "6-Speed Sequential",
     engine: "1,103cc V4",
     location: "Nairobi",
     status: "In Stock",
-    vin: "ZDMH6AAE0RB123456",
-    image: "https://placehold.co/600x400/1a1a1a/c9a84c?text=Ducati+Panigale+V4",
+    vin: "ZDMH6AAE0RB123451",
+    image: "images/Ducati Panigale v4.jpeg",
     crashHistory: "Never dropped. Break-in service completed. Track-ready.",
     maintenanceCost: "KES 180,000/year: Desmo service, premium tires, chain maintenance."
 }, {
@@ -117,12 +117,12 @@ const vehicles = [{
     priceDisplay: "KES 4,200,000",
     mileage: 9500,
     mileageDisplay: "9,500 km",
-    transmission: "6-Speed Manual",
+    transmission: "6-Speed Sequential",
     engine: "1,977cc V-Twin",
     location: "Mombasa",
     status: "In Stock",
-    vin: "1HD1KRR14PB123456",
-    image: "https://placehold.co/600x400/1a1a1a/c9a84c?text=Harley+CVO+Road+Glide",
+    vin: "1HD1KRR14PB123452",
+    image: "images/Harley-Davidson CVO Road Glide.jpeg",
     crashHistory: "Garage kept. Custom paint. No accidents. Full service records.",
     maintenanceCost: "KES 220,000/year: Belt drive, premium oil, custom parts."
 }, {
@@ -135,84 +135,290 @@ const vehicles = [{
     priceDisplay: "KES 2,800,000",
     mileage: 18000,
     mileageDisplay: "18,000 km",
-    transmission: "6-Speed Manual",
+    transmission: "6-Speed Sequential",
     engine: "1,649cc Inline-6",
     location: "Nairobi",
     status: "In Stock",
-    vin: "WB10K1604NW123456",
-    image: "https://placehold.co/600x400/1a1a1a/c9a84c?text=BMW+K1600+GTL",
+    vin: "WB10K1604NW123453",
+    image: "images/BMW K1600 GTL.jpeg",
     crashHistory: "Touring maintained. Regular services. No accidents.",
     maintenanceCost: "KES 200,000/year: Full servicing, shaft drive maintenance."
-}];
+}, {
+    id: 9,
+    type: "car",
+    brand: "Toyota",
+    model: "Land Cruiser 300",
+    year: 2025,
+    price: 23000000,
+    priceDisplay: "KES 23,000,000",
+    mileage: 27000,
+    mileageDisplay: "27,000 km",
+    transmission: "10-Speed Automatic",
+    engine: "3.5L V6 Twin-Turbo",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "JTMHY3FJ0P1234568",
+    image: "images/Toyota LandCruiser 300.jpeg",
+    crashHistory: "No previous owner. Straight from Factory. Full Toyota service history. No accidents.",
+    maintenanceCost: "KES 250,000/year: Full servicing, tire rotation."
+}, {
+    id: 10,
+    type: "car",
+    brand: "Lamborghini",
+    model: "Aventador SVJ",
+    year: 2024,
+    price: 45000000,
+    priceDisplay: "KES 45,000,000",
+    mileage: 15000,
+    mileageDisplay: "15,000 km",
+    transmission: "7-Speed Automatic",
+    engine: "6.5L V12 N/A",
+    location: "Mombasa",
+    status: "In Stock",
+    vin: "ZHWUT7ZP6ML123457",
+    image: "images/Lamborghini Aventador SVJ.jpeg",
+    crashHistory: "Minor accident to the rear left quarter panel. Factory repairs completed. Full service history.",
+    maintenanceCost: "KES 550,000/year: Specialized servicing, premium parts."
+},{
+    id: 11,
+    type: "car",
+    brand: "Ferrari",
+    model: "Purosangue Fiorano Package",
+    year: 2025,
+    price: 140000000,
+    priceDisplay: "KES 140,000,000",
+    mileage: 12000,
+    mileageDisplay: "12,000 km",
+    transmission: "7-Speed Automatic",
+    engine: "6.5L V12 N/A",
+    location: "Roadster, Italy",
+    status: "In Transit",
+    vin: "ZFF78RLA1R1234567",
+    image: "images/Purosangue Fiorano Package.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 650,000/year: Specialized servicing, premium parts."
+},{
+    id: 12,
+    type: "motorcycle",
+    brand: "BMW",
+    model: "S1000 RR",
+    year: 2024,
+    price: 3000000,
+    priceDisplay: "KES 3,000,000",  
+    mileage: 5000,
+    mileageDisplay: "5,000 km",
+    transmission: "6-Speed Sequential",
+    engine: "999cc Inline-4",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "WB10S4100NW123458",
+    image: "images/BMW S1000RR.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 160,000/year: Specialized servicing, premium parts."
+}, {
+    id: 13,
+    type: "motorcycle",
+    brand: "Kawasaki",
+    model: "Ninja H2",
+    year: 2025,
+    price: 5700000,
+    priceDisplay: "KES 5,700,000",
+    mileage: 1500,
+    mileageDisplay: "1,500 km",
+    transmission: "6-Speed Sequential",
+    engine: "998cc Inline-4",
+    location: "Mombasa",
+    status: "In Stock",
+    vin: "JH2SC59057K000123",
+    image: "images/Ninja h2.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 290,000/year: Specialized track servicing, premium track-focused parts."
+}, {
+    id: 14,
+    type: "motorcycle",
+    brand: "Yamaha",
+    model: "YZF-R1",
+    year: 2024,
+    price: 4500000,
+    priceDisplay: "KES 4,500,000",
+    mileage: 2000,
+    mileageDisplay: "2,000 km",
+    transmission: "6-Speed Sequential",
+    engine: "998cc Inline-4",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "JYARN37E5YA012345",
+    image: "images/YZF-R1.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 220,000/year: Specialized servicing, premium parts."
+}, {
+    id: 15,
+    type: "car",
+    brand: "Lamborghini",
+    model: "Urus Performante",
+    year: 2025,
+    price: 135000000,
+    priceDisplay: "KES 135,000,000",
+    mileage: 1000,
+    mileageDisplay: "1,000 km",
+    transmission: "8-Speed Automatic",
+    engine: "4.0L V8",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "ZHWUT9ZP6ML123459",
+    image: "images/Lamborghini Urus Performante.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 650,000/year: Specialized servicing, premium parts."
+}, {
+    id: 16,
+    type: "car",
+    brand: "Aston Martin",
+    model: "DBX707",
+    year: 2025,
+    price: 57000000,
+    priceDisplay: "KES 57,000,000",
+    mileage: 800,
+    mileageDisplay: "800 km",
+    transmission: "9-Speed Automatic",
+    engine: "4.0L V8 Twin-Turbo",
+    location: "Mombasa",
+    status: "In Stock",
+    vin: "SCFAM02A0KB123460",
+    image: "images/Aston Martin DBX707.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 280,000/year: Specialized servicing, premium parts."
+}, {
+    id: 17,
+    type: "car",
+    brand: "Maserati",
+    model: "Levante Trofeo",
+    year: 2024,
+    price: 32000000,
+    priceDisplay: "KES 32,000,000",
+    mileage: 1500,
+    mileageDisplay: "1,500 km",
+    transmission: "9-Speed Automatic",
+    engine: "4.0L V8 Twin-Turbo",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "ZAM57LHA0R1234612",
+    image: "images/Maserati Levante Trofeo.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 160,000/year: Specialized servicing, premium parts."
+ }, {
+    id: 18,
+    type: "car",
+    brand: "Cadillac",
+    model: "Escalade V-Series",
+    year: 2025,
+    price: 35000000,
+    priceDisplay: "KES 35,000,000",
+    mileage: 1200,
+    mileageDisplay: "1,200 km",
+    transmission: "9-Speed Automatic",
+    engine: "6.2L V8 Twin-Turbo",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "1GYS4HKJ0RR123462",
+    image: "images/Cadillac Escalade V-Series.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 175,000/year: Specialized servicing, premium parts."
+}, {
+    id: 19,
+    type: "car",
+    brand: "Lincoln",
+    model: "Navigator Black Label",
+    year: 2025,
+    price: 13500000,
+    priceDisplay: "KES 13,500,000",
+    mileage: 1000,
+    mileageDisplay: "1,000 km",
+    transmission: "9-Speed Automatic",
+    engine: "3.5L V6 Twin-Turbo",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "5LMJJ2HT0SEG12346",
+    image: "images/Licoln Navigator Black-Label.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 675,000/year: Specialized servicing, premium parts."
+}, {
+    id: 20,
+    type: "car",
+    brand: "Bmw Alpina",
+    model: "XB7",
+    year: 2025,
+    price: 48000000,
+    priceDisplay: "KES 48,000,000",
+    mileage: 800,
+    mileageDisplay: "800 km",
+    transmission: "9-Speed Automatic",
+    engine: "4.4L V8 Twin-Turbo & hybrid motor",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "WBA4B1C54LF123463",
+    image: "images/Alpina XB7 showroom.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 700,000/year: Specialized servicing, premium parts."
+}, {
+    id: 21,
+    type: "car",
+    brand: "Audi",
+    model: "R8 V10 Performance",
+    year: 2025,
+    price: 55000000,
+    priceDisplay: "KES 55,000,000",
+    mileage: 600,
+    mileageDisplay: "600 km",
+    transmission: "8-Speed Automatic",
+    engine: "5.2L V10 N/A",
+    location: "Nairobi",
+    status: "In Stock",
+    vin: "WUAZZZ4F1N1234645",
+    image: "images/Audi R8 V10 Performance.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 550,000/year: Specialized servicing, premium parts."
+}, {
+    id: 22,
+    type: "car",
+    brand: "Porsche",
+    model: "918 Spyder",
+    year: 2015,
+    price: 650000000,
+    priceDisplay: "KES 650,000,000",
+    mileage: 400,
+    mileageDisplay: "400 km",
+    transmission: "8-Speed Automatic",
+    engine: "4.6L V8 Hybrid",
+    location: "Stuttgart, Germany",
+    status: "In Transit",
+    vin: "WP0ZZZ99ZTS392124",
+    image: "images/Porsche 918 Spyder.jpeg",
+    crashHistory: "No accidents.Fully restored by Porsche Sonderwerks. Full service history.",
+    maintenanceCost: "KES 1,100,000/year: Specialized servicing, premium parts."
+}, {
+    id: 23,
+    type: "car",
+    brand: "Rolls-Royce",
+    model: "Spectre Black Badge",
+    year: 2025,
+    price: 175000000,
+    priceDisplay: "KES 175,000,000",
+    mileage: 2300,
+    mileageDisplay: "2,300 km",
+    transmission: "Single-speed direct drive",
+    engine: "Dual Synchronous Electric Motors",
+    location: "Goodwood, UK",
+    status: "In Transit",
+    vin: "SCA3B2ZC6PC123465",
+    image: "images/Rolls-Royce Spectre Black Badge.jpeg",
+    crashHistory: "No accidents. Full service history.",
+    maintenanceCost: "KES 850,000/year: Specialized servicing, premium parts."
+}
+];
 
 console.log('Vehicles loaded:', vehicles.length);
 
-// ============================================
-// RENDER INVENTORY
-// ============================================
-const grid = document.getElementById('vehicleGrid');
-const resultCount = document.getElementById('resultCount');
 
-function renderInventory(list) {
-    if (!grid) return;
-    if (list.length === 0) {
-        grid.innerHTML = `
-            <div class="col-12 text-center py-5">
-                <i class="bi bi-search display-4 text-muted"></i>
-                <p class="text-muted mt-3">No vehicles match your criteria.</p>
-            </div>
-        `;
-        resultCount.textContent = '0 vehicles found';
-        return;
-    }
-
-    let html = '';
-    list.forEach(v => {
-        const vinShort = v.vin ? v.vin.slice(-6) : 'N/A';
-        html += `
-            <div class="col-md-6 col-lg-4">
-                <div class="vehicle-card">
-                    <img src="${v.image}" class="card-img-top" alt="${v.brand} ${v.model}" />
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <h5 class="card-title">${v.brand} ${v.model}</h5>
-                            <span class="badge-status badge-in-stock">${v.status}</span>
-                        </div>
-                        <div class="vehicle-meta">
-                            <p class="mb-1"><i class="bi bi-calendar3"></i> ${v.year} · <i class="bi bi-speedometer2"></i> ${v.mileageDisplay}</p>
-                            <p class="mb-1"><i class="bi bi-gear"></i> ${v.transmission}</p>
-                            <p class="mb-1"><i class="bi bi-fuel-pump"></i> ${v.engine}</p>
-                            <p class="mb-2"><i class="bi bi-geo-alt"></i> ${v.location} · <i class="bi bi-upc-scan"></i> VIN: …${vinShort}</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span class="price">${v.priceDisplay}</span>
-                                <button class="btn-report" data-id="${v.id}">
-                                    <i class="bi bi-file-text"></i> Report
-                                </button>
-                            </div>
-                        </div>
-                        <div id="report-${v.id}" class="report-panel">
-                            <p><strong>Full VIN:</strong> ${v.vin}</p>
-                            <p><strong>Crash History:</strong> ${v.crashHistory}</p>
-                            <p><strong>Maintenance Estimate:</strong> ${v.maintenanceCost}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-
-    grid.innerHTML = html;
-    resultCount.textContent = `${list.length} vehicle${list.length > 1 ? 's' : ''} found`;
-
-    document.querySelectorAll('.btn-report').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const id = this.dataset.id;
-            const panel = document.getElementById(`report-${id}`);
-            if (panel) panel.classList.toggle('show');
-        });
-    });
-}
 // RENDER INVENTORY
 const grid = document.getElementById('vehicleGrid');
 const resultCount = document.getElementById('resultCount');
@@ -324,7 +530,7 @@ function resetFilters() {
     document.getElementById('sortSelect').value = 'default';
     applyFilters();
 }
-// 
+ 
 // INITIALIZATION
 document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
