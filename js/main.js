@@ -7,8 +7,8 @@ const vehicles = [{
     year: 2023,
     price: 32000000,
     priceDisplay: "KES 32,000,000",
-    mileage: 8500,
-    mileageDisplay: "8,500 km",
+    mileage: 18500,
+    mileageDisplay: "18,500 km",
     transmission: "8-Speed Automatic",
     engine: "6.0L W12 Twin-Turbo",
     location: "Nairobi",
@@ -25,8 +25,8 @@ const vehicles = [{
     year: 2022,
     price: 45000000,
     priceDisplay: "KES 45,000,000",
-    mileage: 12000,
-    mileageDisplay: "12,000 km",
+    mileage: 12050,
+    mileageDisplay: "12,050 km",
     transmission: "8-Speed Automatic",
     engine: "6.75L V12",
     location: "Nairobi",
@@ -41,10 +41,10 @@ const vehicles = [{
     brand: "Mercedes-Benz",
     model: "S-Class Maybach",
     year: 2024,
-    price: 28000000,
-    priceDisplay: "KES 28,000,000",
-    mileage: 4500,
-    mileageDisplay: "4,500 km",
+    price: 38000000,
+    priceDisplay: "KES 38,000,000",
+    mileage: 12500,
+    mileageDisplay: "12,500 km",
     transmission: "9-Speed Automatic",
     engine: "4.0L V8 Biturbo",
     location: "Mombasa",
@@ -61,8 +61,8 @@ const vehicles = [{
     year: 2023,
     price: 25000000,
     priceDisplay: "KES 25,000,000",
-    mileage: 7800,
-    mileageDisplay: "7,800 km",
+    mileage: 9800,
+    mileageDisplay: "9,800 km",
     transmission: "8-Speed PDK",
     engine: "3.8L Flat-6 Twin-Turbo",
     location: "Nairobi",
@@ -77,8 +77,8 @@ const vehicles = [{
     brand: "Range Rover",
     model: "Autobiography LWB",
     year: 2023,
-    price: 19000000,
-    priceDisplay: "KES 19,000,000",
+    price: 29000000,
+    priceDisplay: "KES 29,000,000",
     mileage: 22000,
     mileageDisplay: "22,000 km",
     transmission: "8-Speed Automatic",
@@ -97,8 +97,8 @@ const vehicles = [{
     year: 2024,
     price: 3200000,
     priceDisplay: "KES 3,200,000",
-    mileage: 2800,
-    mileageDisplay: "2,800 km",
+    mileage: 3800,
+    mileageDisplay: "3,800 km",
     transmission: "6-Speed Sequential",
     engine: "1,103cc V4",
     location: "Nairobi",
@@ -115,8 +115,8 @@ const vehicles = [{
     year: 2023,
     price: 4200000,
     priceDisplay: "KES 4,200,000",
-    mileage: 9500,
-    mileageDisplay: "9,500 km",
+    mileage: 9800,
+    mileageDisplay: "9,800 km",
     transmission: "6-Speed Sequential",
     engine: "1,977cc V-Twin",
     location: "Mombasa",
@@ -169,8 +169,8 @@ const vehicles = [{
     year: 2024,
     price: 45000000,
     priceDisplay: "KES 45,000,000",
-    mileage: 15000,
-    mileageDisplay: "15,000 km",
+    mileage: 27000,
+    mileageDisplay: "27,000 km",
     transmission: "7-Speed Automatic",
     engine: "6.5L V12 N/A",
     location: "Mombasa",
@@ -187,8 +187,8 @@ const vehicles = [{
     year: 2025,
     price: 140000000,
     priceDisplay: "KES 140,000,000",
-    mileage: 12000,
-    mileageDisplay: "12,000 km",
+    mileage: 10500,
+    mileageDisplay: "10500 km",
     transmission: "7-Speed Automatic",
     engine: "6.5L V12 N/A",
     location: "Roadster, Italy",
@@ -259,8 +259,8 @@ const vehicles = [{
     year: 2025,
     price: 135000000,
     priceDisplay: "KES 135,000,000",
-    mileage: 1000,
-    mileageDisplay: "1,000 km",
+    mileage: 1342,
+    mileageDisplay: "1,342 km",
     transmission: "8-Speed Automatic",
     engine: "4.0L V8",
     location: "Nairobi",
@@ -277,8 +277,8 @@ const vehicles = [{
     year: 2025,
     price: 57000000,
     priceDisplay: "KES 57,000,000",
-    mileage: 800,
-    mileageDisplay: "800 km",
+    mileage: 10800,
+    mileageDisplay: "10,800 km",
     transmission: "9-Speed Automatic",
     engine: "4.0L V8 Twin-Turbo",
     location: "Mombasa",
@@ -293,10 +293,10 @@ const vehicles = [{
     brand: "Maserati",
     model: "Levante Trofeo",
     year: 2024,
-    price: 32000000,
-    priceDisplay: "KES 32,000,000",
-    mileage: 1500,
-    mileageDisplay: "1,500 km",
+    price: 38500000,
+    priceDisplay: "KES 38,500,000",
+    mileage: 15300,
+    mileageDisplay: "15,300 km",
     transmission: "9-Speed Automatic",
     engine: "4.0L V8 Twin-Turbo",
     location: "Nairobi",
@@ -313,8 +313,8 @@ const vehicles = [{
     year: 2025,
     price: 48000000,
     priceDisplay: "KES 48,000,000",
-    mileage: 1200,
-    mileageDisplay: "1,200 km",
+    mileage: 5200,
+    mileageDisplay: "5,200 km",
     transmission: "9-Speed Automatic",
     engine: "6.2L V8 Twin-Turbo",
     location: "Nairobi",
@@ -330,9 +330,9 @@ const vehicles = [{
     model: "Navigator Black Label",
     year: 2025,
     price: 13500000,
-    priceDisplay: "KES 13,500,000",
-    mileage: 1000,
-    mileageDisplay: "1,000 km",
+    priceDisplay: "KES 16,500,000",
+    mileage: 4000,
+    mileageDisplay: "4,000 km",
     transmission: "9-Speed Automatic",
     engine: "3.5L V6 Twin-Turbo",
     location: "Nairobi",
@@ -347,8 +347,8 @@ const vehicles = [{
     brand: "Bmw Alpina",
     model: "XB7",
     year: 2025,
-    price: 48000000,
-    priceDisplay: "KES 48,000,000",
+    price: 68000000,
+    priceDisplay: "KES 68,000,000",
     mileage: 800,
     mileageDisplay: "800 km",
     transmission: "9-Speed Automatic",
@@ -367,8 +367,8 @@ const vehicles = [{
     year: 2025,
     price: 55000000,
     priceDisplay: "KES 55,000,000",
-    mileage: 600,
-    mileageDisplay: "600 km",
+    mileage: 4570,
+    mileageDisplay: "4,570 km",
     transmission: "8-Speed Automatic",
     engine: "5.2L V10 N/A",
     location: "Nairobi",
@@ -385,8 +385,8 @@ const vehicles = [{
     year: 2015,
     price: 650000000,
     priceDisplay: "KES 650,000,000",
-    mileage: 400,
-    mileageDisplay: "400 km",
+    mileage: 200,
+    mileageDisplay: "200 km",
     transmission: "8-Speed Automatic",
     engine: "4.6L V8 Hybrid",
     location: "Stuttgart, Germany",
@@ -403,8 +403,8 @@ const vehicles = [{
     year: 2025,
     price: 175000000,
     priceDisplay: "KES 175,000,000",
-    mileage: 2300,
-    mileageDisplay: "2,300 km",
+    mileage: 3300,
+    mileageDisplay: "3,300 km",
     transmission: "Single-speed direct drive",
     engine: "Dual Synchronous Electric Motors",
     location: "Goodwood, UK",
@@ -666,24 +666,75 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!form) return;
 
     const vehicleValues = {
-        'toyota': { base: 1500000, depreciation: 0.08 },
-        'bmw': { base: 2500000, depreciation: 0.10 },
-        'mercedes': { base: 3000000, depreciation: 0.09 },
-        'bentley': { base: 20000000, depreciation: 0.05 },
-        'rolls-royce': { base: 30000000, depreciation: 0.04 },
-        'porsche': { base: 18000000, depreciation: 0.07 },
-        'range rover': { base: 12000000, depreciation: 0.08 },
-        'ducati': { base: 2500000, depreciation: 0.10 },
-        'harley-davidson': { base: 2800000, depreciation: 0.09 },
-        'harley': { base: 2800000, depreciation: 0.09 },
-        'yamaha': { base: 800000, depreciation: 0.12 },
-        'kawasaki': { base: 700000, depreciation: 0.12 },
-        'honda': { base: 900000, depreciation: 0.11 }
+        // ===== CARS =====
+        // Japanese brands (hold value well)
+        'toyota': { base: 1500000, annualDepreciation: 0.08 },
+        'lexus': { base: 2000000, annualDepreciation: 0.07 },
+        'honda': { base: 1200000, annualDepreciation: 0.075 },
+        'subaru': { base: 1100000, annualDepreciation: 0.085 },
+        'mazda': { base: 1000000, annualDepreciation: 0.09 },
+        'nissan': { base: 900000, annualDepreciation: 0.10 },
+        'suzuki': { base: 800000, annualDepreciation: 0.095 },
+
+        // German luxury (depreciate faster)
+        'bmw': { base: 2500000, annualDepreciation: 0.11 },
+        'mercedes': { base: 3000000, annualDepreciation: 0.10 },
+        'mercedes-benz': { base: 3000000, annualDepreciation: 0.10 },
+        'audi': { base: 2800000, annualDepreciation: 0.105 },
+        'volkswagen': { base: 1200000, annualDepreciation: 0.12 },
+        'porsche': { base: 18000000, annualDepreciation: 0.055 },
+        'porsche 911': { base: 18000000, annualDepreciation: 0.055 },
+
+        // British luxury
+        'bentley': { base: 20000000, annualDepreciation: 0.12 },
+        'rolls-royce': { base: 30000000, annualDepreciation: 0.10 },
+        'range rover': { base: 12000000, annualDepreciation: 0.16 },
+        'land rover': { base: 8000000, annualDepreciation: 0.15 },
+        'jaguar': { base: 6000000, annualDepreciation: 0.14 },
+        'aston martin': { base: 22000000, annualDepreciation: 0.12 },
+
+        // American
+        'ford': { base: 1000000, annualDepreciation: 0.13 },
+        'chevrolet': { base: 900000, annualDepreciation: 0.14 },
+        'dodge': { base: 800000, annualDepreciation: 0.15 },
+        'jeep': { base: 850000, annualDepreciation: 0.14 },
+        'tesla': { base: 4000000, annualDepreciation: 0.12 },
+
+        // Italian supercars
+        'ferrari': { base: 25000000, annualDepreciation: 0.07 },
+        'lamborghini': { base: 28000000, annualDepreciation: 0.08 },
+        'maserati': { base: 12000000, annualDepreciation: 0.13 },
+
+        // Korean
+        'hyundai': { base: 700000, annualDepreciation: 0.11 },
+        'kia': { base: 650000, annualDepreciation: 0.11 },
+
+        // Japanese bikes (hold value well)
+        'honda motorcycle': { base: 900000, annualDepreciation: 0.075 },
+        'yamaha': { base: 800000, annualDepreciation: 0.085 },
+        'kawasaki': { base: 700000, annualDepreciation: 0.10 },
+        'suzuki motorcycle': { base: 650000, annualDepreciation: 0.095 },
+
+        // European bikes
+        'ducati': { base: 2500000, annualDepreciation: 0.10 },
+        'bmw motorcycle': { base: 2000000, annualDepreciation: 0.10 },
+        'triumph': { base: 1800000, annualDepreciation: 0.11 },
+        'aprilia': { base: 1500000, annualDepreciation: 0.12 },
+        'ktm': { base: 1200000, annualDepreciation: 0.11 },
+
+        // American bikes
+        'harley-davidson': { base: 2800000, annualDepreciation: 0.08 },
+        'harley': { base: 2800000, annualDepreciation: 0.08 },
+        'indian': { base: 2500000, annualDepreciation: 0.09 }
     };
+
+    // Fallback for unknown brands
+    const DEFAULT_VALUE = { base: 1000000, annualDepreciation: 0.12 };
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
 
+        // Get user inputs
         const make = document.getElementById('vehicleMake').value.toLowerCase().trim();
         const model = document.getElementById('vehicleModel').value.trim();
         const year = parseInt(document.getElementById('vehicleYear').value);
@@ -699,45 +750,65 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        let baseValue = 1000000;
+        let brandData = null;
         for (const [key, value] of Object.entries(vehicleValues)) {
             if (make.includes(key)) {
-                baseValue = value.base;
+                brandData = value;
                 break;
             }
         }
 
+        if (!brandData) {
+            brandData = DEFAULT_VALUE;
+        }
+
+        // ===== CALCULATE DEPRECIATION =====
         const currentYear = 2026;
         const age = currentYear - year;
-        const depreciationRate = 0.10;
-        let value = baseValue * Math.pow(1 - depreciationRate, age);
 
-        const mileageDeduction = Math.floor(mileage / 10000) * 0.02;
-        value = value * (1 - Math.min(mileageDeduction, 0.30));
+        let value = brandData.base;
 
-        const conditionMultipliers = {
-            'excellent': 1.15,
-            'good': 1.0,
-            'fair': 0.80,
-            'poor': 0.55
-        };
-        value = value * (conditionMultipliers[condition] || 1.0);
+
+        for (let i = 0; i < age; i++) {
+            value = value * (1 - brandData.annualDepreciation);
+        }
+
 
         value = Math.max(value, 50000);
+
+        
+        const mileageReduction = Math.min(Math.floor(mileage / 10000) * 0.015, 0.25);
+        value = value * (1 - mileageReduction);
+
+        const conditionMultipliers = {
+            'excellent': 1.12,  // +12% for excellent condition
+            'good': 1.00,       // 0% for good condition
+            'fair': 0.80,       // -20% for fair condition
+            'poor': 0.55        // -45% for poor condition
+        };
+        value = value * (conditionMultipliers[condition] || 1.00);
+
+
+        value = Math.max(Math.round(value), 50000);
+
+        // ===== DISPLAY RESULT =====
+        
+        
+        const displayMake = make.charAt(0).toUpperCase() + make.slice(1);
 
         resultDiv.innerHTML = `
             <div style="background:var(--secondary-dark); border:1px solid var(--accent-gold); padding:1.5rem; border-radius:8px; margin-top:1.5rem;">
                 <h5 style="color:var(--accent-gold); margin-bottom:1rem;">Trade-In Valuation</h5>
                 <p style="color:var(--text-muted);">
-                    <strong style="color:var(--text-light);">${make.toUpperCase()} ${model}</strong> (${year}) · ${condition.charAt(0).toUpperCase() + condition.slice(1)} condition
+                    <strong style="color:var(--text-light);">${displayMake} ${model}</strong> (${year}) · ${condition.charAt(0).toUpperCase() + condition.slice(1)} condition
                 </p>
                 <p style="font-size:2rem; font-weight:700; color:var(--text-light);">
-                    KES ${Math.round(value).toLocaleString()}
+                    KES ${value.toLocaleString()}
                 </p>
                 <p style="color:var(--text-muted); font-size:0.85rem;">
                     <i class="bi bi-info-circle"></i> Based on current market conditions and vehicle data.
                 </p>
-                <button class="btn btn-gold mt-2" onclick="this.parentElement.parentElement.innerHTML=''">
+                <button class="btn btn-gold mt-2" onclick="document.getElementById('tradeinForm').reset(); this.parentElement.parentElement.innerHTML=''">
                     <i class="bi bi-arrow-repeat"></i> New Valuation
                 </button>
             </div>
