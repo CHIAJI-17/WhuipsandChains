@@ -1,4 +1,4 @@
-# WhuipsandChains – Luxury Auto & Motorcycle Dealership
+# WhuipsandChains – Luxury Auto & Motorcycle Dealership By Chiaji Patrick
 
 ## Project Overview
 
