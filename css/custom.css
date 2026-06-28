@@ -187,3 +187,20 @@ a:hover {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+.subtitle{
+    color: #d4c8b8 !important;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px rgba(201, 168, 76, 0.1);
+}
+.description{
+    color: #c4b8a8 !important;
+    font-weight: 300;
+    line-height: 1.8;
+}
+.hero-section .description {
+    color: #c4b8a8 !important;
+}
+.text-muted {
+    color: #c4b8a8 !important;
+}
