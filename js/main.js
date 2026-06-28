@@ -762,7 +762,7 @@ document.addEventListener('DOMContentLoaded', function() {
             brandData = DEFAULT_VALUE;
         }
 
-        // ===== CALCULATE DEPRECIATION =====
+        //CALCULATE DEPRECIATION 
         const currentYear = 2026;
         const age = currentYear - year;
 

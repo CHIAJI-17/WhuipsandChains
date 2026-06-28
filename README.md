@@ -26,7 +26,7 @@ While the concept and design are original, inspiration was drawn from Ace Presti
 
 The landing page features a hero section with the tagline "Where Luxury Meets the Road," a call-to-action button to the inventory, and a statistics section displaying key metrics: vehicles available, customer satisfaction, years of excellence, and concierge support.
 
-**Challenges:** Creating a visually striking hero section without heavy images. Balancing text contrast against the dark background required several iterations.
+**Challenges:** Creating a visually striking hero section without heavy images. Balancing text contrast against the dark background required several iterations. Implementing the Showroom image that needed to follow the set standard of hd images so i employeed the use of ai to create the image in high quality while using our company name and details.
 
 **Key Code:** The hero uses flexbox for vertical centering. Statistics use Bootstrap's `col-md-3` for four equal columns that stack on mobile.
 
@@ -49,7 +49,7 @@ Eight sample vehicles are stored in a JavaScript array with realistic data inclu
 
 Shares the dealership's story, founding year (2026), and meaning behind the name. A values section displays three core principles: Excellence, Integrity, and Passion.
 
-**Challenges:** Creating an authentic company story that wasn't generic while maintaining the luxury aesthetic.
+**Challenges:** Creating an authentic company story that wasn't generic while maintaining the luxury aesthetic and professional.
 
 **Key Code:** Values use three cards with `col-md-4` on desktop. Cards have a hover effect using `transform: translateY(-4px)`. CSS variables maintain consistent gold accents.
 
@@ -67,36 +67,34 @@ Displays location, phone, email, and working hours. A contact form includes clie
 
 Includes a payment calculator estimating monthly loan payments. Users enter vehicle price, interest rate, and loan term in months. The calculator displays monthly payment, total payment, total interest, and term length.
 
-**Challenges:** Implementing the amortization formula correctly with floating-point precision. Ensuring edge cases (zero interest or zero term) were handled.
+**Challenges:** The implementation of the financial system in my project was difficult as i am not fully acclaimed with the system used when a car is being purchased on loan. After a bit research, I found out that dealerships work with banks to use credit-scores (which i am still unfamiliar with on how it works) to calculate the interest rate. Instead i used fixed interest rates depending on the term of the loan. Ensuring edge cases (zero interest or zero term) were handled.
 
 **Key Code:** The formula `monthlyPayment = amount * (rate * Math.pow(1 + rate, term)) / (Math.pow(1 + rate, term) - 1)` calculates payments. `toLocaleString` formats KES values without decimals. Results use inline styles matching the dark theme.
 
----
 
 ### Service Page (Service.html)
 
 Displays three maintenance packages: Basic (KES 15,000), Full (KES 45,000), and Premium (KES 85,000). Each includes a list of services. A "Book a Service" button links to the Contact page.
 
-**Challenges:** Structuring packages to clearly communicate value differences between tiers.
+**Challenges:** Structuring packages to clearly communicate value differences between tiers. While trying to be inclusive of all users i realized it logically didn't make sense for example a Suzuki Alto driver bringing their car to our garage tho its possible. I stuck to the plot of the project and maintained the reality of catering to high-end/ high-echelon members of our car community as we offer nothing short of the highest quality service.
 
 **Key Code:** Each package uses `service-card` with icons, title, price, and features list. `col-md-4` creates three columns. The booking button is centered using `text-center` and `mt-4`.
 
----
 
 ### Warranty Page (Warranty.html)
 
 Details Standard Warranty (2 years/50,000 km) and Extended Warranty (5 years/100,000 km). Includes coverage features and a step-by-step claims process.
 
-**Challenges:** Presenting comprehensive warranty information clearly without overwhelming users.
+**Challenges:** Presenting comprehensive warranty information clearly without overwhelming users. 
 
 **Key Code:** Cards use `col-lg-6` for two columns on large screens. `badge-warranty` creates gold labels for "Included" and "Optional." The claim process uses an ordered list.
 
 
 ### Trade-In Page (Trade-In.html)
 
-Allows customers to get instant vehicle valuations. Users enter make, model, year, mileage, and condition. The calculator uses a database of brand-specific values and realistic depreciation rates. Toyota depreciates ~8% annually, Porsche ~5.5%, Range Rover ~16%. Mileage deductions apply 1.5% per 10,000 km (max 25%). Condition multipliers range from 1.12 (excellent) to 0.55 (poor). Unknown brands default to 1,000,000 KES at 12% depreciation.
+Allows customers to get instant vehicle valuations. Users enter make, model, year, mileage, and condition. The calculator uses a database of brand-specific values and realistic depreciation rates. Toyota depreciates ~8% annually, Porsche ~5.5%, Range Rover ~16%. Mileage deductions apply 1.5% per 10,000 km (max 25%). Condition multipliers range from 1.12 (excellent) to 0.55 (poor). Unknown brands (Brands that weren't listed in our database) default to 1,000,000 KES at 12% depreciation. 
 
-**Challenges:** Researching realistic depreciation rates for 35+ brands. Balancing accuracy with simplicity. Updating the calculator while maintaining the same UI.
+**Challenges:** Researching realistic depreciation rates for 35+ brands. Balancing accuracy with simplicity. Updating the calculator while maintaining the same UI. The calculator can't account for models of different makes as that would require a more intricate database system and its an ever changing list. The closest option to achieving this was to use an api but i couldnt find an existing database that stores this information that offered an api key to use. And from my experience with api's if i did find one, i would've needed a back-end to manage it.
 
 **Key Code:** `vehicleValues` stores base values and depreciation rates. The depreciation loop applies annual rates for each year of age. Mileage reduction uses `Math.min(Math.floor(mileage / 10000) * 0.015, 0.25)`. Condition multipliers adjust final value. Results display with KES formatting.
 
@@ -105,7 +103,7 @@ Allows customers to get instant vehicle valuations. Users enter make, model, yea
 
 Introduces six team members with photos, roles, and bios. Includes Managing Director, Head of Sales, Master Technician, Finance Manager, Motorcycle Specialist, and Client Concierge.
 
-**Challenges:** Creating realistic bios that build trust while staying concise.
+**Challenges:** Creating realistic bios that build trust while staying concise. I had originally planned on having each head of department have a drop down to display the other members of that department underneath them following the design format of the vehicle cards in the inventory page but i had trouble fitting multiple cards below the head of department. So i decided to stick to just showing the HoDs.
 
 **Key Code:** Each profile uses `staff-card` with avatar, name, role, and bio. `col-md-4` creates three columns. Avatars use circles with gold borders. Hover effects lift cards.
 
@@ -134,7 +132,7 @@ Uses Bootstrap's accordion component for six frequently asked questions covering
 
 - **Ace Prestige Autos:** Inspiration for dealership layout and user experience patterns
 - **YouTube:** Tutorials for trade-in valuation calculator logic
-- **AI Assistance:** Used sparingly for code cleanup in the trade-in calculator and some CSS styling; core logic and structure remain original work
+- **AI Assistance:** Used sparingly for code cleanup in the trade-in calculator and some CSS styling; core logic and structure remain original work. 
 
 
 ## Conclusion
