@@ -666,7 +666,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!form) return;
 
     const vehicleValues = {
-        // ===== CARS =====
+
         // Japanese brands (hold value well)
         'toyota': { base: 1500000, annualDepreciation: 0.08 },
         'lexus': { base: 2000000, annualDepreciation: 0.07 },
@@ -791,9 +791,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         value = Math.max(Math.round(value), 50000);
 
-        // ===== DISPLAY RESULT =====
-        
-        
+        //  DISPLAY RESULT 
         const displayMake = make.charAt(0).toUpperCase() + make.slice(1);
 
         resultDiv.innerHTML = `
